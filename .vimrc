@@ -22,9 +22,10 @@ set incsearch " Incremental search
 set hlsearch " Highlight all found items
 
 " Spell
+set encoding=utf-8
 set spell " Check spelling
 set spelllang=en_au " Set default spelling to Australian English
-"set spellfile=$HOME/.vim/spell/en.utf-8.add
+set spellfile=.vim/spell/en.utf-8.add
 
 " Metrics
 set number " Turn line numbers on
