@@ -1,0 +1,18 @@
+Applications/
+Creative Cloud Files/
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+
+.[!g,z,b,v,t]*
+.bash[r,_][c,s,h]*
+.zsh_history
+.vim
+.viminfo
+.Trash
+*.swp
