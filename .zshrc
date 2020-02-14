@@ -28,4 +28,4 @@ alias push='git push'
 alias pull='git pull'
 alias log='git log'
 
-export PS1="%6F>_%f %4F%T%f %5F%2~%f %F{yellow}$%f "
+export PS1="%12F>_%f %13F%T%f %14F%2~%f %F{yellow}$%f "
