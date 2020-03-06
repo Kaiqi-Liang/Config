@@ -7,11 +7,12 @@ set shiftwidth=4 " Indents will have a width of 4
 " Theme
 syntax on " Turn colours on
 color delek " Change colorscheme
-set background=dark " Highlight the current line number
 
 " Cursorline
 set cursorline " Highlight the line where the cursor is on
-hi CursorLine cterm=bold
+set background=dark " Highlight the current line number
+" Hide underlining
+hi CursorLine cterm=none
 
 " Case
 set ignorecase " Do case insensitive matching
@@ -20,12 +21,14 @@ set smartcase " Do case sensitive matching when a pattern contains an uppercase 
 " Search
 set incsearch " Incremental search
 set hlsearch " Highlight all found items
+" Change the search highlight colour to white on dark grey
+hi Search ctermfg=white ctermbg=DarkGrey
 
 " Spell
-set encoding=utf-8
+set encoding=utf-8 " Set the encoding to UTF-8
 set spell " Check spelling
 set spelllang=en_au " Set default spelling to Australian English
-set spellfile=.vim/spell/en.utf-8.add
+set spellfile=.vim/spell/en.utf-8.add " Set up a dictionary to add good words
 
 " Metrics
 set number " Turn line numbers on
