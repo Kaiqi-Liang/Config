@@ -1,4 +1,5 @@
 alias paths='sudo vim /etc/paths'
+alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 alias clean='make clean'
 alias h='history 20'
@@ -6,8 +7,8 @@ alias lsl='ls -l'
 alias lsa='ls -A'
 alias desktop='cd ~/Desktop'
 alias activate='. venv/bin/activate'
-alias code='cd /Users/Kaiqi\ Liang/Documents/Code'
 
+alias code='cd /Users/Kaiqi\ Liang/Documents/Code'
 alias 1911='cd /Users/Kaiqi\ Liang/Documents/UNSW/1st\ Year/Semester\ 1/COMP1911/Code'
 alias 1521='cd /Users/Kaiqi\ Liang/Documents/UNSW/1st\ Year/Semester\ 2/COMP1521/Code'
 alias 1531='cd /Users/Kaiqi\ Liang/Documents/UNSW/2nd\ Year/Trimester\ 3/COMP1531/Code'
@@ -26,6 +27,5 @@ alias master='checkout master'
 alias merge='git merge'
 alias push='git push'
 alias pull='git pull'
-alias log='git log'
 
 export PS1="%12F>_%f %13F%T%f %14F%2~%f %F{yellow}$%f "
