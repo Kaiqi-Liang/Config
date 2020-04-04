@@ -1,18 +1,22 @@
-Applications/
-Creative Cloud Files/
-Desktop/
-Documents/
-Downloads/
-Library/
-Movies/
-Music/
-Pictures/
-Public/
+/Applications/
+/Creative Cloud Files/
+/Desktop/
+/Documents/
+/Downloads/
+/Library/
+/Movies/
+/Music/
+/Pictures/
+/Public/
 
-.[!g,z,b,v,t]*
-.bash[r,_][c,s,h]*
-.zsh_history
-.vim
-.viminfo
-.Trash
-*.swp
+# don't ignore .bash*, .git*, .zshrc, .vimrc, .tmux.conf
+/.[!b,g,z,v,t]*
+
+# ignore .bash_history, .bash_sessions
+/.bash_[s,h]*
+
+# ignore .vim/ and .viminfo
+/.vim*
+
+/.zsh_history
+/.Trash
