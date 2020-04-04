@@ -1,3 +1,5 @@
 [user]
 	name = Kaiqi
 	email = kaiqi.liang@unsw.edu.au
+[core]
+	excludesfile = /Users/Kaiqi Liang/.gitignore_global
