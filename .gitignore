@@ -9,14 +9,14 @@
 /Pictures/
 /Public/
 
-# don't ignore .bash*, .git*, .zshrc, .vimrc, .tmux.conf
+# exclude .bash*, .git*, .zshrc, .vimrc, .tmux.conf
 /.[!b,g,z,v,t]*
 
-# ignore .bash_history, .bash_sessions
+# .bash_history, .bash_sessions
 /.bash_[s,h]*
 
-# ignore .vim/ and .viminfo
+# .vim/ and .viminfo
 /.vim*
 
 /.zsh_history
-/.Trash
+/.Trash/
