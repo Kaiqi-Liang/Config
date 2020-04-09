@@ -1,3 +1,4 @@
+# match only those directories in ~
 /Applications/
 /Creative Cloud Files/
 /Desktop/
@@ -10,10 +11,10 @@
 /Public/
 
 # exclude .bash*, .git*, .zshrc, .vimrc, .tmux.conf
-/.[!b,g,z,v,t]*
+/.[!bgzvt]*
 
 # .bash_history, .bash_sessions
-/.bash_[s,h]*
+/.bash_[sh]*
 
 # .vim/ and .viminfo
 /.vim*
