@@ -20,4 +20,5 @@
 /.vim*
 
 /.zsh_history
+/.grip/
 /.Trash/
