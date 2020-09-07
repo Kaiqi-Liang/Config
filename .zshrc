@@ -48,3 +48,6 @@ function mkcd {
 }
 
 export PS1="%15F>_%f %14F%2~%f %11F$%f "
+
+# Add Visual Studio Code (code)
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:.:/Library/TeX/texbin:/Library/Apple/usr/bin"
