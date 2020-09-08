@@ -4,6 +4,7 @@ do
     ln -i $config ~/.$config
 done
 
+# Set up vim spell dictionary
 spell=.vim/spell
 if ! mkdir ~/$spell
 then
