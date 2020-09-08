@@ -4,4 +4,14 @@ do
     ln -i $config ~/.$config
 done
 
-cp -r .vim/spell ~/.vim
+spell=.vim/spell
+if ! mkdir ~/$spell
+then
+    rm -r ~/$spell
+    mkdir ~/$spell
+fi
+
+for file in $spell/*
+do
+    ln -i $file ~/$spell
+done
