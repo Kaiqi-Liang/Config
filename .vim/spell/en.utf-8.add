@@ -32,3 +32,5 @@ zsh
 usr
 env
 uppercase
+AUTH
+auth
