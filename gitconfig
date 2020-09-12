@@ -3,3 +3,4 @@
 	email = kaiqi.liang@outlook.com
 [core]
 	excludesfile = /Users/kaiqiliang/.gitignore_global
+	whitespace = cr-at-eol

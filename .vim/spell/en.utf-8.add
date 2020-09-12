@@ -34,3 +34,5 @@ env
 uppercase
 AUTH
 auth
+ls
+grep
