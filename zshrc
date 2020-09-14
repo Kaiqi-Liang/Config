@@ -40,6 +40,8 @@ alias 2511='cd /Users/kaiqiliang/Documents/UNSW/3rd\ Year/Trimester\ 2/COMP2511/
 alias 3141='cd /Users/kaiqiliang/Documents/UNSW/3rd\ Year/Trimester\ 2/COMP3141/Code'
 alias 3311='cd /Users/kaiqiliang/Documents/UNSW/2nd\ Year/Trimester\ 3/COMP3311/Code'
 alias 3331='cd /Users/kaiqiliang/Documents/UNSW/2nd\ Year/Trimester\ 3/COMP3331/Code'
+alias 3900='cd /Users/kaiqiliang/Documents/UNSW/3rd\ Year/Trimester\ 3/COMP3900/Code'
+alias 6080='cd /Users/kaiqiliang/Documents/UNSW/3rd\ Year/Trimester\ 3/COMP6080/Code'
 
 function mkcd {
     mkdir -p "$1"
