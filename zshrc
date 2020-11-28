@@ -25,6 +25,7 @@ alias egrep='egrep --color=auto'
 # Other aliases
 alias java='java -ea'
 alias stat='stat -x'
+alias mkdir='mkdir -p'
 alias activate='. venv/bin/activate'
 
 # Quick access to certain directories
