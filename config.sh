@@ -1,18 +1,15 @@
 #!/bin/zsh
+mkdir ~/.ghc
+mkdir ~/.ssh
 for config in [a-z]*[!.]?? [sg][sh][ch]/*
 do
     ln -i $config ~/.$config
 done
 
 # Set up vim spell dictionary
-spell=.vim/spell
-if ! mkdir ~/$spell
-then
-    rm -r ~/$spell
-    mkdir ~/$spell
-fi
-
+spell=vim/spell
+mkdir ~/.$spell
 for file in $spell/*
 do
-    ln -i $file ~/$spell
+    ln -i $file ~/.$spell
 done
