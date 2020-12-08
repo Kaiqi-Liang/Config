@@ -1,3 +1,5 @@
+source ~/.bash_profile
+
 ###############################################################################
 #             Terminal color code added by "1511 colours" below               #
 
@@ -9,11 +11,11 @@
 force_color_prompt=yes
 color_prompt=yes
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
+# if [ "$color_prompt" = yes ]; then
+#     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# else
+#     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+# fi
 unset color_prompt force_color_prompt
 
 # enable color support of ls and also add handy aliases
@@ -28,7 +30,7 @@ fi
 
 # colored GCC warnings and errors
 
-export PS1='${debian_chroot:+($debian_chroot)}\[\033[00;32m\]\u@\h\[\033[00m\]:\[\033[00;36m\]\w\[\033[00m\]\$ '
+# export PS1='${debian_chroot:+($debian_chroot)}\[\033[00;32m\]\u@\h\[\033[00m\]:\[\033[00;36m\]\w\[\033[00m\]\$ '
 
 #           End of terminal color code added by "1511 colours"                #
 ###############################################################################
