@@ -45,3 +45,5 @@ const
 parseInt
 Math
 min
+ssh
+config
