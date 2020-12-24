@@ -18,7 +18,7 @@ done
 
 # Set up the rest of the config files
 mkdir -p ~/.ghc
-for config in [a-z]*[!.]?? [sg][sh][ch]/*
+for config in (ssh|ghc)/* *rc *_* *config
 do
     echo creating ~/.$config
     ln -i $config ~/.$config
