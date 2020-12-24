@@ -7,18 +7,11 @@ then
     cat $ssh/id_rsa.pub
 fi
 
-# Set up vim spell dictionary
+# Set up all the config files
 spell=vim/spell
 mkdir -p ~/.$spell
-for file in $spell/*
-do
-    echo creating ~/.$spell
-    ln -i $file ~/.$spell
-done
-
-# Set up the rest of the config files
 mkdir -p ~/.ghc
-for config in (ssh|ghc)/* *rc *_* *config
+for config in $spell/* (ssh|ghc)/* *rc *_* *config
 do
     echo creating ~/.$config
     ln -i $config ~/.$config
