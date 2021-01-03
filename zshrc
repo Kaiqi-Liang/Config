@@ -1,3 +1,4 @@
+# Aliases for config files
 alias paths='sudo vim /etc/paths'
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
@@ -22,14 +23,8 @@ alias df='df -h'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 
-# Other aliases
-alias java='java -ea'
-alias stat='stat -x'
-alias activate='. venv/bin/activate'
-
 # Quick access to certain directories
 alias desktop='cd ~/Desktop'
-
 alias 1911='cd /Users/kaiqiliang/Documents/UNSW/Coursework/1st\ Year/Semester\ 1/COMP1911/Code'
 alias 1521='cd /Users/kaiqiliang/Documents/UNSW/Coursework/1st\ Year/Semester\ 2/COMP1521/Code'
 alias 1531='cd /Users/kaiqiliang/Documents/UNSW/Coursework/2nd\ Year/Trimester\ 3/COMP1531/Code'
@@ -42,11 +37,6 @@ alias 3311='cd /Users/kaiqiliang/Documents/UNSW/Coursework/2nd\ Year/Trimester\ 
 alias 3331='cd /Users/kaiqiliang/Documents/UNSW/Coursework/2nd\ Year/Trimester\ 3/COMP3331/Code'
 alias 3900='cd /Users/kaiqiliang/Documents/UNSW/Coursework/3rd\ Year/Trimester\ 3/COMP3900/Code'
 alias 6080='cd /Users/kaiqiliang/Documents/UNSW/Coursework/3rd\ Year/Trimester\ 3/COMP6080/Code'
-
-function mkcd {
-    mkdir -p "$1"
-    cd "$1"
-}
 
 # Shortcut for git
 alias add='git add'
@@ -66,6 +56,11 @@ function commitpush {
     fi
 }
 
+# Other aliases
+alias java='java -ea'
+alias stat='stat -x'
+alias activate='. venv/bin/activate'
+
 # Setting for history
 alias h='history -E'
 setopt HIST_IGNORE_ALL_DUPS
@@ -74,4 +69,18 @@ setopt HIST_IGNORE_ALL_DUPS
 export PS1="%15F>_%f %14F%2~%f %11F$%f "
 
 # Add Visual Studio Code (code)
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# Other functions
+function mkcd {
+    mkdir -p "$1"
+    cd "$1"
+}
+
+function scroll {
+    while true
+    do
+        /Users/kaiqiliang/Documents/UNSW/Coursework/1st\ Year/Semester\ 2/COMP1521/Code/ass1/scroll "$1"
+    done
+}
+
