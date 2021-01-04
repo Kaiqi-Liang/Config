@@ -1,0 +1,4 @@
+virtualenv
+pylint
+pytest
+coverage

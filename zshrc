@@ -38,7 +38,7 @@ alias 3331='cd /Users/kaiqiliang/Documents/UNSW/Coursework/2nd\ Year/Trimester\ 
 alias 3900='cd /Users/kaiqiliang/Documents/UNSW/Coursework/3rd\ Year/Trimester\ 3/COMP3900/Code'
 alias 6080='cd /Users/kaiqiliang/Documents/UNSW/Coursework/3rd\ Year/Trimester\ 3/COMP6080/Code'
 
-# Shortcut for git
+# Shortcuts for git
 alias add='git add'
 alias commit='git commit'
 alias status='git status'
@@ -61,7 +61,7 @@ alias java='java -ea'
 alias stat='stat -x'
 alias activate='. venv/bin/activate'
 
-# Setting for history
+# Settings for history
 alias h='history -E'
 setopt HIST_IGNORE_ALL_DUPS
 
