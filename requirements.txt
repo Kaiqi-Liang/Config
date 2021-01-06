@@ -2,3 +2,4 @@ virtualenv
 pylint
 pytest
 coverage
+hypothesis
