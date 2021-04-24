@@ -25,7 +25,7 @@ set hlsearch " Highlight all found items
 hi Search ctermfg=white ctermbg=DarkGrey
 
 " Spell
-set spell
+"set spell
 set encoding=utf-8 " Set the encoding to UTF-8
 set spelllang=en_au " Set default spelling to Australian English
 set spellfile=~/.vim/spell/en.utf-8.add " Set up a dictionary to add good words
