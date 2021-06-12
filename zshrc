@@ -5,10 +5,7 @@ alias vimrc='vim ~/.vimrc'
 
 # Aliases for ls
 alias ls='ls -G'
-alias ll='ls -Alhi'
 alias lol='ls -Aoh'
-alias lsl='ls -lh'
-alias lsa='ls -A'
 
 # Get confirmation before doing destructive move
 alias cp='cp -i'
@@ -56,8 +53,11 @@ function commitpush {
     fi
 }
 
-# Other aliases
+# Compiler flags
 alias java='java -ea'
+alias g++='g++ -std=c++20'
+
+# Other aliases
 alias stat='stat -x'
 alias activate='. venv/bin/activate'
 
