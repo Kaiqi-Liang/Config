@@ -4,3 +4,6 @@
 [core]
 	excludesfile = /Users/kaiqiliang/.gitignore_global
 	whitespace = cr-at-eol
+[pull]
+	ff = only
+	rebase = true

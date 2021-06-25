@@ -1,8 +1,6 @@
 " Indent
 filetype plugin indent on " Indent to the same level when press enter
-set expandtab " Expand TABs to spaces
-set tabstop=4 " The width of a TAB is set to 4
-set shiftwidth=4 " Indents will have a width of 4
+set tabstop=4 " The width of a TAB is set to 4 spaces
 
 " Theme
 syntax on " Turn colours on

@@ -55,7 +55,8 @@ function commitpush {
 
 # Compiler flags
 alias java='java -ea'
-alias g++='g++ -std=c++20'
+alias g++='g++ -std=c++20 -Wall'
+alias gcc='gcc -Wall'
 
 # Other aliases
 alias stat='stat -x'
