@@ -47,10 +47,10 @@ alias push='git push'
 alias pull='git pull'
 
 function commitpush {
-    if git commit -am "$1"
-    then
-        git push
-    fi
+	if git commit -am "$1"
+	then
+		git push
+	fi
 }
 
 # Compiler flags
@@ -74,14 +74,13 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 # Other functions
 function mkcd {
-    mkdir -p "$1"
-    cd "$1"
+	mkdir -p "$1"
+	cd "$1"
 }
 
 function scroll {
-    while true
-    do
-        /Users/kaiqiliang/Documents/UNSW/Coursework/1st\ Year/Semester\ 2/COMP1521/Code/ass1/scroll "$1"
-    done
+	while /Users/kaiqiliang/Documents/UNSW/Coursework/2018/Semester\ 2/COMP1521/Code/ass1/scroll "$1"
+	do
+	done
 }
 
