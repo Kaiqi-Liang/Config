@@ -2,6 +2,7 @@
 alias paths='sudo vim /etc/paths'
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
+alias settings='vim ~/Library/Application\ Support/Code/User/settings.json'
 
 # Aliases for ls
 alias ls='ls -G'
