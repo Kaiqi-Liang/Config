@@ -70,8 +70,9 @@ setopt HIST_IGNORE_ALL_DUPS
 # Customise command prompt
 export PS1="%15F>_%f %14F%2~%f %11F$%f "
 
-# Add Visual Studio Code (code)
+# Add Developer Tools to PATH
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="$PATH:/Applications/CMake.app/Contents/bin"
 
 # Other functions
 function mkcd {
