@@ -42,16 +42,26 @@ alias commit='git commit'
 alias status='git status'
 alias branch='git branch'
 alias checkout='git checkout'
-alias master='checkout master'
-alias merge='git merge'
 alias push='git push'
 alias pull='git pull'
+alias remote='git remote -v'
 
 function commitpush {
 	if git commit -am "$1"
 	then
 		git push
 	fi
+}
+
+function master {
+	if ! checkout master 2> /dev/null
+	then
+		checkout main
+	fi
+}
+
+function bundle {
+	git bundle create "$1" --all
 }
 
 # Compiler flags
@@ -71,10 +81,16 @@ setopt HIST_IGNORE_ALL_DUPS
 export PS1="%15F>_%f %14F%2~%f %11F$%f "
 
 # Add Developer Tools to PATH
+export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="$PATH:/Applications/CMake.app/Contents/bin"
 
 # Other functions
+function repo {
+	url=`git remote -v | head -1 | cut -f2 | cut -d'@' -f2 | cut -d' ' -f1 | tr ':' '/'`
+	open https://$url
+}
+
 function mkcd {
 	mkdir -p "$1"
 	cd "$1"
@@ -84,5 +100,9 @@ function scroll {
 	while /Users/kaiqiliang/Documents/UNSW/Coursework/2018/Semester\ 2/COMP1521/Code/ass1/scroll "$1"
 	do
 	done
+}
+
+function qr {
+	curl qrcode.show/"$1"
 }
 
