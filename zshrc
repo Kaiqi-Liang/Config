@@ -14,7 +14,7 @@ alias mv='mv -i'
 alias ln='ln -i'
 
 # Get human readable file sizes
-alias du='du -h'
+alias du='du -hd1'
 alias df='df -h'
 
 # Colourise grep
@@ -87,8 +87,11 @@ export PATH="$PATH:/Applications/CMake.app/Contents/bin"
 
 # Other functions
 function repo {
-	url=`git remote -v | head -1 | cut -f2 | cut -d'@' -f2 | cut -d' ' -f1 | tr ':' '/'`
-	open https://$url
+	if url=`git remote -v`
+	then
+		url=`echo $url | head -1 | cut -f2 | cut -d'@' -f2 | cut -d' ' -f1 | tr ':' '/'`
+		open https://$url
+	fi
 }
 
 function mkcd {
