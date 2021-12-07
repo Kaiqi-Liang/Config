@@ -22,7 +22,6 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Quick access to certain directories
-alias desktop='cd /Users/kaiqiliang/Desktop'
 alias document='cd /Users/kaiqiliang/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/'
 alias 18s1='cd /Users/kaiqiliang/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2018/Semester\ 1'
 alias 18s2='cd /Users/kaiqiliang/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2018/Semester\ 2'
@@ -64,6 +63,14 @@ function bundle {
 	git bundle create "$1" --all
 }
 
+function repo {
+	if url=`git remote -v`
+	then
+		url=`echo $url | head -1 | cut -f2 | cut -d'@' -f2 | cut -d' ' -f1 | tr ':' '/'`
+		open https://$url
+	fi
+}
+
 # Compiler flags
 alias java='java -ea'
 alias g++='g++ -std=c++20 -Wall'
@@ -86,14 +93,6 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 export PATH="$PATH:/Applications/CMake.app/Contents/bin"
 
 # Other functions
-function repo {
-	if url=`git remote -v`
-	then
-		url=`echo $url | head -1 | cut -f2 | cut -d'@' -f2 | cut -d' ' -f1 | tr ':' '/'`
-		open https://$url
-	fi
-}
-
 function mkcd {
 	mkdir -p "$1"
 	cd "$1"
