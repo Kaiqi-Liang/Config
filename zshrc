@@ -64,7 +64,8 @@ function bundle {
 }
 
 function repo {
-	if url=`git remote -v`
+	url=`git remote -v`
+	if ! test -z $url
 	then
 		url=`echo $url | head -1 | cut -f2 | cut -d'@' -f2 | cut -d' ' -f1 | tr ':' '/'`
 		open https://$url
