@@ -13,7 +13,8 @@ fi
 spell=vim/spell
 mkdir -p ~/.$spell
 mkdir -p ~/.ghc
-for config in $spell/* (ssh|ghc)/* *rc *_* *config
+mkdir -p ~/.zsh
+for config in $spell/* ([zs]sh|ghc)/* *rc *_* *config
 do
 	echo creating ~/.$config
 	ln -i $config ~/.$config

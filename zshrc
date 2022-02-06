@@ -109,3 +109,8 @@ function scroll {
 function qr {
 	curl qrcode.show/"$1"
 }
+
+# Auto completion for git
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit && compinit
