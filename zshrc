@@ -36,13 +36,7 @@ alias 21t2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNS
 alias 21t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2021/Trimester\ 3'
 
 # Shortcuts for git
-alias add='git add'
-alias commit='git commit'
-alias status='git status'
-alias branch='git branch'
-alias checkout='git checkout'
-alias push='git push'
-alias pull='git pull'
+alias branch='git branch -a'
 alias remote='git remote -v'
 
 function commitpush {
