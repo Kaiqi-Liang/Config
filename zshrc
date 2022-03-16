@@ -47,7 +47,7 @@ function commitpush {
 }
 
 function master {
-	if ! checkout master 2> /dev/null
+	if ! git checkout master 2> /dev/null
 	then
 		checkout main
 	fi
@@ -74,6 +74,7 @@ alias gcc='gcc -Wall'
 # Other aliases
 alias stat='stat -x'
 alias activate='. venv/bin/activate'
+alias dirs='dirs -v'
 
 # Settings for history
 alias h='history -E'
