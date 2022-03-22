@@ -19,3 +19,10 @@ do
 	echo creating ~/.$config
 	ln -i $config ~/.$config
 done
+
+for script in bin/*
+do
+	exec=`echo $script | cut -d'.' -f1`
+	echo creating /usr/local/$exec
+	sudo ln -i $script /usr/local/$exec
+done
