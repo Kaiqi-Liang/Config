@@ -109,3 +109,16 @@ function qr {
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
+
+# Initialise conda
+__conda_setup="$('/Users/kaiqiliang/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/kaiqiliang/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/kaiqiliang/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/kaiqiliang/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
