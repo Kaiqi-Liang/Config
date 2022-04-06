@@ -22,7 +22,7 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Quick access to certain directories
-alias document='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/'
+alias document='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Documents'
 alias 18s1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2018/Semester\ 1'
 alias 18s2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2018/Semester\ 2'
 alias 19t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2019/Trimester\ 1'
@@ -34,6 +34,8 @@ alias 20t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNS
 alias 21t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2021/Trimester\ 1'
 alias 21t2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2021/Trimester\ 2'
 alias 21t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2021/Trimester\ 3'
+alias 22t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Tutoring/2022/Trimester\ 1'
+alias 22s1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA/2022/Semester\ 1'
 
 # Shortcuts for git
 alias branch='git branch -a'
@@ -49,7 +51,7 @@ function commitpush {
 function master {
 	if ! git checkout master 2> /dev/null
 	then
-		checkout main
+		git checkout main
 	fi
 }
 
@@ -67,6 +69,7 @@ function repo {
 }
 
 # Compiler flags
+alias python='python3'
 alias java='java -ea'
 alias g++='g++ -std=c++20 -Wall'
 alias gcc='gcc -Wall'
