@@ -23,18 +23,18 @@ alias egrep='egrep --color=auto'
 
 # Quick access to certain directories
 alias document='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Documents'
-alias 18s1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2018/Semester\ 1'
-alias 18s2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2018/Semester\ 2'
-alias 19t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2019/Trimester\ 1'
-alias 19t2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2019/Trimester\ 2'
-alias 19t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2019/Trimester\ 3'
-alias 20t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2020/Trimester\ 1'
-alias 20t2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2020/Trimester\ 2'
-alias 20t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2020/Trimester\ 3'
-alias 21t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2021/Trimester\ 1'
-alias 21t2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2021/Trimester\ 2'
-alias 21t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2021/Trimester\ 3'
-alias 22t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Tutoring/2022/Trimester\ 1'
+alias 18s1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2018/Semester\ 1'
+alias 18s2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2018/Semester\ 2'
+alias 19t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2019/Trimester\ 1'
+alias 19t2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2019/Trimester\ 2'
+alias 19t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2019/Trimester\ 3'
+alias 20t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2020/Trimester\ 1'
+alias 20t2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2020/Trimester\ 2'
+alias 20t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2020/Trimester\ 3'
+alias 21t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2021/Trimester\ 1'
+alias 21t2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2021/Trimester\ 2'
+alias 21t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2021/Trimester\ 3'
+alias 22t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2022/Trimester\ 1'
 alias 22s1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA/2022/Semester\ 1'
 
 # Shortcuts for git
@@ -99,7 +99,7 @@ function mkcd {
 }
 
 function scroll {
-	while $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/Coursework/2018/Semester\ 2/COMP1521/Code/ass1/scroll "$1"
+	while $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2018/Semester\ 2/COMP1521/Code/ass1/scroll "$1"
 	do
 	done
 }
