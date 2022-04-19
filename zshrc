@@ -63,8 +63,12 @@ function repo {
 	url=`git remote -v`
 	if ! test -z $url
 	then
-		url=`echo $url | head -1 | cut -f2 | cut -d'@' -f2 | cut -d' ' -f1 | tr ':' '/'`
-		open https://$url
+		url=`echo $url | head -1 | cut -f2 | cut -d' ' -f1`
+		if ! echo $url | grep https > /dev/null
+		then
+			url=https://`echo $url | cut -d'@' -f2 | tr ':' '/'`
+		fi
+		open $url
 	fi
 }
 
