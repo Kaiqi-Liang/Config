@@ -1,3 +1,7 @@
 Host cse
 HostName weber.cse.unsw.edu.au
 User z5210932
+
+Host hpc
+HostName kaya.hpc.uwa.edu.au
+User cits5508u79
