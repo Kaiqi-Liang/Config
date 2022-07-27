@@ -37,6 +37,7 @@ alias 21t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNS
 alias 22t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2022/Trimester\ 1'
 alias 22t2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2022/Trimester\ 2'
 alias 22s1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA/2022/Semester\ 1'
+alias 22s2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA/2022/Semester\ 2'
 
 # Shortcuts for git
 alias branch='git branch -a'
@@ -130,3 +131,9 @@ else
     fi
 fi
 unset __conda_setup
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kaiqiliang/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kaiqiliang/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kaiqiliang/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kaiqiliang/google-cloud-sdk/completion.zsh.inc'; fi
