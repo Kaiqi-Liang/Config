@@ -92,12 +92,6 @@ setopt HIST_IGNORE_ALL_DUPS
 # Customise command prompt
 export PS1="%15F>_%f %14F%2~%f %11F$%f "
 
-# Add Developer Tools to PATH
-export PATH="$PATH:/Library/TeX/texbin"
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-export PATH="$PATH:/Applications/CMake.app/Contents/bin"
-. "$HOME/.cargo/env"
-
 # Other functions
 function mkcd {
 	mkdir -p "$1"
@@ -137,3 +131,11 @@ if [ -f '/Users/kaiqiliang/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kaiq
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kaiqiliang/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kaiqiliang/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Add Developer Tools to PATH
+. "$HOME/.cargo/env"
+export PATH="$PATH:/Library/TeX/texbin"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="$PATH:/Applications/CMake.app/Contents/bin"
+export PATH="/usr/local/bin:$PATH"
+

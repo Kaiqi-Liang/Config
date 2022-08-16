@@ -4,7 +4,7 @@ set tabstop=4 " The width of a TAB is set to 4 spaces
 
 " Theme
 syntax on " Turn colours on
-color delek " Change colorscheme
+color elflord
 
 " Cursorline
 set cursorline " Highlight the line where the cursor is on

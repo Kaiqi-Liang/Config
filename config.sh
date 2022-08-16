@@ -26,3 +26,6 @@ do
 	echo creating /usr/local/$exec
 	sudo ln -i $script /usr/local/$exec
 done
+
+echo creating /etc/paths
+sudo ln -i paths /etc
