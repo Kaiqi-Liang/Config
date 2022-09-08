@@ -108,6 +108,16 @@ function qr {
 	curl qrcode.show/"$1"
 }
 
+function ip {
+	if [[ $1 = 'public' ]]
+	then
+		curl ifconfig.me
+		echo
+	else
+		ifconfig | egrep 'inet .* broadcast' | cut -d' ' -f2
+	fi
+}
+
 # Auto completion for git
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
