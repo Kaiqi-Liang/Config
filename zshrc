@@ -119,6 +119,10 @@ function ip {
 	fi
 }
 
+function killport {
+	sudo lsof -t -i:$1 | xargs kill
+}
+
 # Auto completion for git
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
