@@ -4,8 +4,11 @@
 [core]
 	excludesfile = /Users/kaiqiliang/.gitignore_global
 	whitespace = cr-at-eol
+	untrackedCache = true
 [pull]
 	ff = only
 	rebase = true
 [init]
 	defaultBranch = main
+[status]
+	showUntrackedFiles = no
