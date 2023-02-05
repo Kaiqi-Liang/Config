@@ -5,12 +5,14 @@ then
 	exit
 fi
 
-g++ -std=c++14 $1 2> /dev/null
-for input in tests/input[0-9][0-9][0-9].txt
-do
-	./a.out < $input > output
-	output=`echo $input | sed 's/in/out/'`
-	diff -w output $output
-done
-rm a.out
-rm output
+if g++ -std=c++14 $1 2> /dev/null
+then
+	for input in tests/input[0-9][0-9][0-9].txt
+	do
+		./a.out < $input
+		output=`echo $input | sed 's/in/out/'`
+		diff -w $OUTPUT_PATH $output
+	done
+	rm a.out
+	rm output
+fi

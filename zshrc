@@ -80,6 +80,7 @@ alias python='python3'
 alias java='java -ea'
 alias g++='g++ -std=c++20 -Wall'
 alias gcc='gcc -Wall'
+alias clang-format='clang-format -style=file'
 
 # Other aliases
 alias stat='stat -x'
@@ -153,4 +154,3 @@ export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="$PATH:/Applications/CMake.app/Contents/bin"
 export PATH="/usr/local/bin:$PATH"
-
