@@ -1,8 +1,8 @@
 # Aliases for config files
 alias paths='sudo vim /etc/paths'
-alias zshrc='vim ~/.zshrc'
-alias vimrc='vim ~/.vimrc'
-alias settings='vim ~/Library/Application\ Support/Code/User/settings.json'
+alias zshrc='vim $HOME/.zshrc'
+alias vimrc='vim $HOME/.vimrc'
+alias settings='vim $HOME/Library/Application\ Support/Code/User/settings.json'
 
 # Aliases for ls
 alias ls='ls -G'
@@ -80,7 +80,6 @@ alias python='python3'
 alias java='java -ea'
 alias g++='g++ -std=c++20 -Wall'
 alias gcc='gcc -Wall'
-alias clang-format='clang-format -style=file'
 
 # Other aliases
 alias stat='stat -x'
@@ -95,6 +94,12 @@ setopt HIST_IGNORE_ALL_DUPS
 export PS1="%15F>_%f %14F%2~%f %11F$%f "
 
 # Other functions
+function formatcpp {
+	cp $HOME/Work/Code/LeetCode/.clang-format .
+	clang-format -style=file -i "$1"
+	rm .clang-format
+}
+
 function mkcd {
 	mkdir -p "$1"
 	cd "$1"
@@ -125,8 +130,8 @@ function killport {
 }
 
 # Auto completion for git
-zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
-fpath=(~/.zsh $fpath)
+zstyle ':completion:*:*:git:*' script $HOME/.zsh/git-completion.bash
+fpath=($HOME/.zsh $fpath)
 autoload -Uz compinit && compinit
 
 # Initialise conda
