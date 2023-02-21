@@ -39,6 +39,7 @@ alias 22t2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNS
 alias 22t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2022/Trimester\ 3'
 alias 22s1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA/2022/Semester\ 1'
 alias 22s2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA/2022/Semester\ 2'
+alias 23s1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA/2023/Semester\ 1'
 
 # Shortcuts for git
 alias branch='git branch -a'
