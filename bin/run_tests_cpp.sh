@@ -1,11 +1,17 @@
 export OUTPUT_PATH=output
-if ! echo $1 | grep *.cpp > /dev/null
+if ! echo $1 | egrep .*.cpp > /dev/null
 then
-	echo Usage: r_tests_cpp *.cpp
+	echo Usage: run_tests_cpp *.cpp 20
 	exit
 fi
 
-if g++ -std=c++14 $1 2> /dev/null
+if ! echo $2 | egrep "^\d{2}$" > /dev/null
+then
+	echo Usage: run_tests_cpp *.cpp 20
+	exit
+fi
+
+if g++ -std=c++$2 $1
 then
 	for input in tests/input[0-9][0-9][0-9].txt
 	do
