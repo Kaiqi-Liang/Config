@@ -96,7 +96,7 @@ export PS1="%15F>_%f %14F%2~%f %11F$%f "
 
 # Other functions
 function formatcpp {
-	cp $HOME/Work/Code/LeetCode/.clang-format .
+	cp $HOME/Work/Code/GitHub/LeetCode/.clang-format .
 	clang-format -style=file -i "$1"
 	rm .clang-format
 }

@@ -1,3 +1,7 @@
+Host pioneer
+HostName 192.168.2.242
+User group7
+
 Host cse
 HostName weber.cse.unsw.edu.au
 User z5210932
