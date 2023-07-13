@@ -16,16 +16,25 @@ mkdir -p ~/.ghc
 mkdir -p ~/.zsh
 for config in $spell/* ([zs]sh|ghc)/* *rc *_* *config clang-format
 do
-	echo creating ~/.$config
-	ln -i $config ~/.$config
+	if ! diff ~/.$config $config > /dev/null
+	then
+		echo creating ~/.$config
+		ln -i $config ~/.$config
+	fi
 done
 
 for script in bin/*
 do
 	exec=`echo $script | cut -d'.' -f1`
-	echo creating /usr/local/$exec
-	sudo ln -i $script /usr/local/$exec
+	if ! diff /usr/local/$exec $script > /dev/null
+	then
+		echo creating /usr/local/$exec
+		sudo ln -i $script /usr/local/$exec
+	fi
 done
 
-echo creating /etc/paths
-sudo ln -i paths /etc
+if ! diff /etc/paths paths > /dev/null
+then
+	echo creating /etc/paths
+	sudo ln -i paths /etc
+fi
