@@ -14,7 +14,7 @@ alias mv='mv -i'
 alias ln='ln -i'
 
 # Get human readable file sizes
-alias du='du -hd1'
+alias du='du -h'
 alias df='df -h'
 
 # Colourise grep
@@ -40,6 +40,8 @@ alias 22t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNS
 alias 22s1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA/2022/Semester\ 1'
 alias 22s2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA/2022/Semester\ 2'
 alias 23s1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA/2023/Semester\ 1'
+alias 23s2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA/2023/Semester\ 2'
+alias 23t2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2023/Trimester\ 2'
 
 # Shortcuts for git
 alias branch='git branch -a'
@@ -76,11 +78,16 @@ function repo {
 	fi
 }
 
+function dus {
+	du -d1 $1 | sort -hr
+}
+
 # Compiler flags
 alias python='python3'
 alias java='java -ea'
 alias g++='g++ -std=c++20 -Wall'
 alias gcc='gcc -Wall'
+alias clang-format='clang-format -style=file -i'
 
 # Other aliases
 alias stat='stat -x'
@@ -93,13 +100,6 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # Customise command prompt
 export PS1="%15F>_%f %14F%2~%f %11F$%f "
-
-# Other functions
-function formatcpp {
-	cp $HOME/Work/Code/GitHub/LeetCode/.clang-format .
-	clang-format -style=file -i "$1"
-	rm .clang-format
-}
 
 function mkcd {
 	mkdir -p "$1"

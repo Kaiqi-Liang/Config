@@ -14,7 +14,7 @@ spell=vim/spell
 mkdir -p ~/.$spell
 mkdir -p ~/.ghc
 mkdir -p ~/.zsh
-for config in $spell/* ([zs]sh|ghc)/* *rc *_* *config
+for config in $spell/* ([zs]sh|ghc)/* *rc *_* *config clang-format
 do
 	echo creating ~/.$config
 	ln -i $config ~/.$config
