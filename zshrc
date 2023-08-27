@@ -47,6 +47,26 @@ alias 23t2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNS
 alias branch='git branch -a'
 alias remote='git remote -v'
 
+function clang++ {
+	if echo "$1" | grep '\.cpp$' > /dev/null
+	then
+		out=`echo "$1" | cut -d'.' -f1`
+		g++ -std=c++20 -pedantic -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined,address -fno-omit-frame-pointer "$1" -o $out
+	else
+		echo "g++ error: input a C++ file with an extension .cpp"
+	fi
+}
+
+function clang {
+	if echo "$1" | grep '\.c$' > /dev/null
+	then
+		out=`echo "$1" | cut -d'.' -f1`
+		gcc -std=c17 -pedantic -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined,address -fno-omit-frame-pointer "$1" -o $out
+	else
+		echo "gcc error: input a C file with an extension .c"
+	fi
+}
+
 function commitpush {
 	if git commit -am "$1"
 	then
@@ -83,10 +103,10 @@ function dus {
 }
 
 # Compiler flags
-alias python='python3'
+alias python='/Users/kaiqiliang/miniconda3/bin/python'
 alias java='java -ea'
-alias g++='g++ -std=c++20 -Wall'
-alias gcc='gcc -Wall'
+alias gcc='gcc -std=c17 -pedantic -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined,address -fno-omit-frame-pointer'
+alias g++='g++ -std=c++20 -pedantic -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined,address -fno-omit-frame-pointer'
 alias clang-format='clang-format -style=file -i'
 
 # Other aliases
@@ -159,4 +179,5 @@ if [ -f '/Users/kaiqiliang/google-cloud-sdk/completion.zsh.inc' ]; then . '/User
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="$PATH:/Applications/CMake.app/Contents/bin"
+export PATH="/opt/local/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"

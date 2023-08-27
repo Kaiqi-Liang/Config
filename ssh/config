@@ -9,3 +9,30 @@ User z5210932
 Host hpc
 HostName kaya.hpc.uwa.edu.au
 User cits5508u79
+
+Host supercomputer
+HostName setonix.pawsey.org.au
+User kliang1
+
+Host kali
+HostName 192.168.64.2
+User kaiqi
+
+Host metasploitable
+HostName 192.168.64.3
+User msfadmin
+HostKeyAlgorithms=+ssh-dss
+
+Host ubuntu
+HostName 192.168.64.6
+User vagrant
+
+Host debian
+HostName 192.168.64.7
+User user
+HostKeyAlgorithms=+ssh-dss
+
+Host x86
+HostName 192.168.64.9
+User kaiqi
+
