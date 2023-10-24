@@ -42,6 +42,7 @@ alias 22s2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA
 alias 23s1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA/2023/Semester\ 1'
 alias 23s2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWA/2023/Semester\ 2'
 alias 23t2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2023/Trimester\ 2'
+alias 23t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2023/Trimester\ 3'
 
 # Shortcuts for git
 alias branch='git branch -a'
@@ -181,3 +182,4 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 export PATH="$PATH:/Applications/CMake.app/Contents/bin"
 export PATH="/opt/local/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="$PATH:/opt/homebrew/bin"
