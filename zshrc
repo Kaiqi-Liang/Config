@@ -23,6 +23,7 @@ alias egrep='egrep --color=auto'
 
 # Quick access to certain directories
 alias document='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Documents'
+alias chatgpt='python3 /Users/kaiqiliang/Config/chatgpt.py'
 alias 18s1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2018/Semester\ 1'
 alias 18s2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2018/Semester\ 2'
 alias 19t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2019/Trimester\ 1'
@@ -47,26 +48,6 @@ alias 23t3='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNS
 # Shortcuts for git
 alias branch='git branch -a'
 alias remote='git remote -v'
-
-function clang++ {
-	if echo "$1" | grep '\.cpp$' > /dev/null
-	then
-		out=`echo "$1" | cut -d'.' -f1`
-		g++ -std=c++20 -pedantic -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined,address -fno-omit-frame-pointer "$1" -o $out
-	else
-		echo "g++ error: input a C++ file with an extension .cpp"
-	fi
-}
-
-function clang {
-	if echo "$1" | grep '\.c$' > /dev/null
-	then
-		out=`echo "$1" | cut -d'.' -f1`
-		gcc -std=c17 -pedantic -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined,address -fno-omit-frame-pointer "$1" -o $out
-	else
-		echo "gcc error: input a C file with an extension .c"
-	fi
-}
 
 function commitpush {
 	if git commit -am "$1"
@@ -104,11 +85,10 @@ function dus {
 }
 
 # Compiler flags
-alias python='/Users/kaiqiliang/miniconda3/bin/python'
 alias java='java -ea'
-alias gcc='gcc -std=c17 -pedantic -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined,address -fno-omit-frame-pointer'
-alias g++='g++ -std=c++20 -pedantic -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined,address -fno-omit-frame-pointer'
-alias clang-format='clang-format -style=file -i'
+CFLAGS='-pedantic -Wall -Wextra -Wconversion -Wshadow -fno-omit-frame-pointer -fsanitize=undefined,address'
+export CXXFLAGS='-std=c++20 '$CFLAGS
+export CFLAGS='-std=c17 '$CFLAGS
 
 # Other aliases
 alias stat='stat -x'
@@ -183,3 +163,7 @@ export PATH="$PATH:/Applications/CMake.app/Contents/bin"
 export PATH="/opt/local/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/opt/homebrew/bin"
+export PATH="$PATH:/usr/local/apache-maven-3.9.5/bin"
+export PATH="$PATH:/Users/kaiqiliang/miniconda3/bin"
+export PATH="/Users/kaiqiliang/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+export MODULAR_HOME="/Users/kaiqiliang/.modular"

@@ -1,4 +1,7 @@
 virtualenv
 autopep8
+black
 pytest
 problog
+colorama
+openai

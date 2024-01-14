@@ -35,6 +35,7 @@ set ruler " Display column and line numbers in statusline
 " Others
 set mouse=a " Enable mouse usage (all modes)
 set autowrite " Automatically save before commands like :next and :make
+set nowrap
 
 " Tabs
 nnoremap <C-h> :tabprevious<CR>
