@@ -23,6 +23,15 @@ do
 	fi
 done
 
+xcode=~/Library/Developer/Xcode/UserData/KeyBindings
+keybindings=Default.idekeybindings
+
+if ! diff $xcode/$keybindings $keybindings > /dev/null
+then
+	echo creating $xcode/$keybindings
+	ln -i $keybindings $xcode/$keybindings
+fi
+
 for script in bin/*
 do
 	exec=`echo $script | cut -d'.' -f1`
