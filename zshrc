@@ -91,6 +91,8 @@ CFLAGS='-pedantic -Wall -Wextra -Wconversion -Wshadow -fno-omit-frame-pointer -f
 export CXXFLAGS='-std=c++20 '$CFLAGS
 export CFLAGS='-std=c17 '$CFLAGS
 
+alias make_dbg_cpp="make CC=g++ CXXFLAGS='$CXXFLAGS -g'"
+
 # Other aliases
 alias stat='stat -x'
 alias activate='. venv/bin/activate'
