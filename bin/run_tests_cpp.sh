@@ -11,7 +11,7 @@ then
 	exit
 fi
 
-if g++ -std=c++$2 $1
+if g++ -std=c++$2 $1 -pedantic -Wall -Wextra -Wconversion -Wshadow -fno-omit-frame-pointer -fsanitize=undefined,address -g
 then
 	for input in tests/input[0-9][0-9][0-9].txt
 	do
@@ -21,5 +21,6 @@ then
 		diff -w $OUTPUT_PATH $output
 	done
 	rm a.out
+	rm -rf a.out.dSYM
 	rm output
 fi
