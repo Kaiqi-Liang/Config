@@ -3,7 +3,7 @@ HostName 192.168.2.242
 User group7
 
 Host cse
-HostName weber.cse.unsw.edu.au
+HostName cse.unsw.edu.au
 User z5210932
 
 Host hpc
@@ -35,4 +35,13 @@ HostKeyAlgorithms=+ssh-dss
 Host x86
 HostName 192.168.64.9
 User kaiqi
+
+Host oracle
+HostName 152.67.96.202
+User opc
+IdentityFile ~/.ssh/oracle_cloud.key
+
+Host linux
+HostName 192.168.64.2
+User debian
 
