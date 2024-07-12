@@ -41,7 +41,3 @@ HostName 152.67.96.202
 User opc
 IdentityFile ~/.ssh/oracle_cloud.key
 
-Host linux
-HostName 192.168.64.2
-User debian
-
