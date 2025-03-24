@@ -6,6 +6,7 @@ alias settings='vim $HOME/Library/Application\ Support/Code/User/settings.json'
 
 # Aliases for ls
 alias ls='ls -G'
+alias ll='ls -l'
 alias lol='ls -Aoh'
 
 # Get confirmation before doing destructive move
@@ -89,7 +90,7 @@ function dus {
 # Compiler flags
 alias java='java -ea'
 CFLAGS='-pedantic -Wall -Wextra -Wconversion -Wshadow -fno-omit-frame-pointer -fsanitize=undefined,address'
-export CXXFLAGS='-std=c++20 '$CFLAGS
+export CXXFLAGS='-std=c++26 '$CFLAGS
 export CFLAGS='-std=c17 '$CFLAGS
 
 alias make_dbg_cpp="make CC=g++ CXXFLAGS='$CXXFLAGS -g'"
@@ -135,10 +136,13 @@ function killport {
 	sudo lsof -t -i:$1 | xargs kill
 }
 
-# Auto completion for git
+# Auto completion
 zstyle ':completion:*:*:git:*' script $HOME/.zsh/git-completion.bash
 fpath=($HOME/.zsh $fpath)
+autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
+complete -C '/usr/local/bin/aws_completer' aws
+
 
 # Initialise conda
 __conda_setup="$('/Users/kaiqiliang/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -169,5 +173,9 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/opt/homebrew/bin"
 export PATH="$PATH:/usr/local/apache-maven-3.9.5/bin"
 export PATH="$PATH:/Users/kaiqiliang/miniconda3/bin"
+
+# Developer toolkit for Mojo
 export PATH="/Users/kaiqiliang/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+export PATH="$PATH:/Users/kaiqiliang/.modular/bin"
 export MODULAR_HOME="/Users/kaiqiliang/.modular"
+eval "$(magic completion --shell zsh)"
