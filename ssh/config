@@ -1,10 +1,11 @@
-Host pioneer
-HostName 192.168.2.242
-User group7
-
 Host cse
 HostName cse.unsw.edu.au
 User z5210932
+
+Host oracle
+HostName 152.67.96.202
+User opc
+IdentityFile ~/.ssh/oracle_cloud.key
 
 Host hpc
 HostName kaya.hpc.uwa.edu.au
@@ -14,14 +15,9 @@ Host supercomputer
 HostName setonix.pawsey.org.au
 User kliang1
 
-Host kali
-HostName 192.168.64.10
-User kaiqi
-
-Host metasploitable
-HostName 192.168.64.11
-User msfadmin
-HostKeyAlgorithms=+ssh-dss
+Host pioneer
+HostName 192.168.2.242
+User group7
 
 Host ubuntu
 HostName 192.168.64.6
@@ -36,8 +32,12 @@ Host x86
 HostName 192.168.64.9
 User kaiqi
 
-Host oracle
-HostName 152.67.96.202
-User opc
-IdentityFile ~/.ssh/oracle_cloud.key
+Host kali
+HostName 192.168.64.10
+User kaiqi
+
+Host metasploitable
+HostName 192.168.64.11
+User msfadmin
+HostKeyAlgorithms=+ssh-dss
 
