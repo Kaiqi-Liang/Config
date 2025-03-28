@@ -7,7 +7,7 @@ alias settings='vim $HOME/Library/Application\ Support/Code/User/settings.json'
 # Aliases for ls
 alias ls='ls -G'
 alias ll='ls -l'
-alias lol='ls -Aoh'
+alias lol='ls -Aoht'
 
 # Get confirmation before doing destructive move
 alias cp='cp -i'
@@ -89,6 +89,7 @@ function dus {
 
 # Compiler flags
 alias java='java -ea'
+alias python3='/opt/homebrew/bin/python3'
 CFLAGS='-pedantic -Wall -Wextra -Wconversion -Wshadow -fno-omit-frame-pointer -fsanitize=undefined,address'
 export CXXFLAGS='-std=c++26 '$CFLAGS
 export CFLAGS='-std=c17 '$CFLAGS
@@ -168,8 +169,8 @@ if [ -f '/Users/kaiqiliang/google-cloud-sdk/completion.zsh.inc' ]; then . '/User
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="$PATH:/Applications/CMake.app/Contents/bin"
-export PATH="/opt/local/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:/opt/local/bin"
 export PATH="$PATH:/opt/homebrew/bin"
 export PATH="$PATH:/usr/local/apache-maven-3.9.5/bin"
 export PATH="$PATH:/Users/kaiqiliang/miniconda3/bin"
