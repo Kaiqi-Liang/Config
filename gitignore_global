@@ -10,3 +10,5 @@
 *.log
 *.out
 *.synctex.gz
+target
+build

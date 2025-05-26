@@ -18,10 +18,6 @@ alias ln='ln -i'
 alias du='du -h'
 alias df='df -h'
 
-# Colourise grep
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-
 # Quick access to certain directories
 alias document='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Documents'
 alias chatgpt='python3 /Users/kaiqiliang/Config/chatgpt.py'
@@ -88,13 +84,12 @@ function dus {
 }
 
 # Compiler flags
-alias java='java -ea'
-alias python3='/opt/homebrew/bin/python3'
 CFLAGS='-pedantic -Wall -Wextra -Wconversion -Wshadow -fno-omit-frame-pointer -fsanitize=undefined,address'
 export CXXFLAGS='-std=c++26 '$CFLAGS
 export CFLAGS='-std=c17 '$CFLAGS
-
 alias make_dbg_cpp="make CC=g++ CXXFLAGS='$CXXFLAGS -g'"
+alias java='java -ea'
+alias python3='/opt/homebrew/bin/python3'
 
 # Other aliases
 alias stat='stat -x'
@@ -104,9 +99,6 @@ alias dirs='dirs -v'
 # Settings for history
 alias h='history -E'
 setopt HIST_IGNORE_ALL_DUPS
-
-# Customise command prompt
-export PS1="%15F>_%f %14F%2~%f %11F$%f "
 
 function mkcd {
 	mkdir -p "$1"
@@ -136,6 +128,7 @@ function ip {
 function killport {
 	sudo lsof -t -i:$1 | xargs kill
 }
+
 
 # Auto completion
 zstyle ':completion:*:*:git:*' script $HOME/.zsh/git-completion.bash
@@ -174,9 +167,14 @@ export PATH="$PATH:/opt/local/bin"
 export PATH="$PATH:/opt/homebrew/bin"
 export PATH="$PATH:/usr/local/apache-maven-3.9.5/bin"
 export PATH="$PATH:/Users/kaiqiliang/miniconda3/bin"
+export PATH="$PATH:/Users/kaiqiliang/.local/bin"
 
 # Developer toolkit for Mojo
 export PATH="/Users/kaiqiliang/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
 export PATH="$PATH:/Users/kaiqiliang/.modular/bin"
 export MODULAR_HOME="/Users/kaiqiliang/.modular"
 eval "$(magic completion --shell zsh)"
+
+# Customise command prompt and grep
+export GREP_OPTIONS='--colour=auto'
+export PS1="%15F>_%f %14F%2~%f %11F$%f "
