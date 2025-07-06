@@ -1,3 +1,4 @@
+BREW=/opt/homebrew/bin
 # Aliases for config files
 alias paths='sudo vim /etc/paths'
 alias zshrc='vim $HOME/.zshrc'
@@ -89,12 +90,13 @@ export CXXFLAGS='-std=c++26 '$CFLAGS
 export CFLAGS='-std=c17 '$CFLAGS
 alias make_dbg_cpp="make CC=g++ CXXFLAGS='$CXXFLAGS -g'"
 alias java='java -ea'
-alias python3='/opt/homebrew/bin/python3'
+alias python3='$BREW/python3.12'
 
 # Other aliases
 alias stat='stat -x'
-alias activate='. venv/bin/activate'
 alias dirs='dirs -v'
+alias activate='. venv/bin/activate'
+alias chrome='pbpaste|xargs open -a /Applications/Google\ Chrome.app'
 
 # Settings for history
 alias h='history -E'
@@ -106,7 +108,7 @@ function mkcd {
 }
 
 function scroll {
-	while $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2018/Semester\ 2/COMP1521/Code/ass1/scroll "$1"
+	while $HOME/Work/Uni/2018/semester2/comp1521/ass1/scroll "$1"
 	do
 	done
 }
@@ -128,15 +130,6 @@ function ip {
 function killport {
 	sudo lsof -t -i:$1 | xargs kill
 }
-
-
-# Auto completion
-zstyle ':completion:*:*:git:*' script $HOME/.zsh/git-completion.bash
-fpath=($HOME/.zsh $fpath)
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-complete -C '/usr/local/bin/aws_completer' aws
-
 
 # Initialise conda
 __conda_setup="$('/Users/kaiqiliang/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -164,7 +157,7 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 export PATH="$PATH:/Applications/CMake.app/Contents/bin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/opt/local/bin"
-export PATH="$PATH:/opt/homebrew/bin"
+export PATH="$PATH:$BREW"
 export PATH="$PATH:/usr/local/apache-maven-3.9.5/bin"
 export PATH="$PATH:/Users/kaiqiliang/miniconda3/bin"
 export PATH="$PATH:/Users/kaiqiliang/.local/bin"
@@ -178,3 +171,11 @@ eval "$(magic completion --shell zsh)"
 # Customise command prompt and grep
 export GREP_OPTIONS='--colour=auto'
 export PS1="%15F>_%f %14F%2~%f %11F$%f "
+
+# Auto completion
+zstyle ':completion:*:*:git:*' script $HOME/.zsh/git-completion.bash
+fpath=($HOME/.zsh $fpath)
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/usr/local/bin/aws_completer' aws
+source <(kubectl completion zsh)

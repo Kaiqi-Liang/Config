@@ -7,6 +7,11 @@ HostName 152.67.96.202
 User opc
 IdentityFile ~/.ssh/oracle_cloud.key
 
+Host nxos
+HostName sbx-nxos-mgmt.cisco.com
+User admin
+Password Admin_1234!
+
 Host hpc
 HostName kaya.hpc.uwa.edu.au
 User cits5508u79
