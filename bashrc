@@ -35,3 +35,4 @@ fi
 #           End of terminal color code added by "1511 colours"                #
 ###############################################################################
 
+. "/Users/kaiqiliang/.deno/env"

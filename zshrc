@@ -91,6 +91,7 @@ export CFLAGS='-std=c17 '$CFLAGS
 alias make_dbg_cpp="make CC=g++ CXXFLAGS='$CXXFLAGS -g'"
 alias java='java -ea'
 alias python3='$BREW/python3.12'
+alias pip='/Users/kaiqiliang/miniconda3/bin/pip'
 
 # Other aliases
 alias stat='stat -x'
@@ -178,4 +179,4 @@ fpath=($HOME/.zsh $fpath)
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 complete -C '/usr/local/bin/aws_completer' aws
-source <(kubectl completion zsh)
+. "/Users/kaiqiliang/.deno/env"

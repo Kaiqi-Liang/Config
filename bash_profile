@@ -47,3 +47,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 source /opt/homebrew/etc/bash_completion.d/bazel-complete.bash
+. "/Users/kaiqiliang/.deno/env"

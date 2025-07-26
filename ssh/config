@@ -3,14 +3,14 @@ HostName cse.unsw.edu.au
 User z5210932
 
 Host oracle
-HostName 152.67.96.202
+HostName 152.67.116.73
 User opc
 IdentityFile ~/.ssh/oracle_cloud.key
 
 Host nxos
 HostName sbx-nxos-mgmt.cisco.com
 User admin
-Password Admin_1234!
+# Pass Admin_1234!
 
 Host hpc
 HostName kaya.hpc.uwa.edu.au
