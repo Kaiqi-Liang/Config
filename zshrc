@@ -21,7 +21,7 @@ alias df='df -h'
 
 # Quick access to certain directories
 alias document='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Documents'
-alias chatgpt='python3 /Users/kaiqiliang/Config/chatgpt.py'
+alias chatgpt='python3 $HOME/Config/chatgpt.py'
 alias 18s1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2018/Semester\ 1'
 alias 18s2='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2018/Semester\ 2'
 alias 19t1='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UNSW/2019/Trimester\ 1'
@@ -91,7 +91,7 @@ export CFLAGS='-std=c17 '$CFLAGS
 alias make_dbg_cpp="make CC=g++ CXXFLAGS='$CXXFLAGS -g'"
 alias java='java -ea'
 alias python3='$BREW/python3.12'
-alias pip='/Users/kaiqiliang/miniconda3/bin/pip'
+alias pip='/usr/bin/python3 -m pip'
 
 # Other aliases
 alias stat='stat -x'
@@ -133,23 +133,23 @@ function killport {
 }
 
 # Initialise conda
-__conda_setup="$('/Users/kaiqiliang/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/kaiqiliang/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/kaiqiliang/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/kaiqiliang/miniconda3/bin:$PATH"
+        export PATH="$HOME/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kaiqiliang/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kaiqiliang/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/kaiqiliang/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kaiqiliang/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Add Developer Tools to PATH
 . "$HOME/.cargo/env"
@@ -160,18 +160,9 @@ export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/opt/local/bin"
 export PATH="$PATH:$BREW"
 export PATH="$PATH:/usr/local/apache-maven-3.9.5/bin"
-export PATH="$PATH:/Users/kaiqiliang/miniconda3/bin"
-export PATH="$PATH:/Users/kaiqiliang/.local/bin"
-
-# Developer toolkit for Mojo
-export PATH="/Users/kaiqiliang/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
-export PATH="$PATH:/Users/kaiqiliang/.modular/bin"
-export MODULAR_HOME="/Users/kaiqiliang/.modular"
-eval "$(magic completion --shell zsh)"
-
-# Customise command prompt and grep
-export GREP_OPTIONS='--colour=auto'
-export PS1="%15F>_%f %14F%2~%f %11F$%f "
+export PATH="$PATH:$HOME/Library/Python/3.9/bin"
+export PATH="$PATH:$HOME/miniconda3/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Auto completion
 zstyle ':completion:*:*:git:*' script $HOME/.zsh/git-completion.bash
@@ -179,4 +170,14 @@ fpath=($HOME/.zsh $fpath)
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 complete -C '/usr/local/bin/aws_completer' aws
-. "/Users/kaiqiliang/.deno/env"
+. "$HOME/.deno/env"
+
+# Developer toolkit for Mojo
+export PATH="$PATH:$HOME/.modular/pkg/packages.modular.com_mojo/bin"
+export PATH="$PATH:$HOME/.modular/bin"
+export MODULAR_HOME="$HOME/.modular"
+eval "$(magic completion --shell zsh)"
+
+# Customise command prompt and grep
+export GREP_OPTIONS='--colour=auto'
+export PS1="%15F>_%f %14F%2~%f %11F$%f "
